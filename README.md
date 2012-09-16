@@ -101,4 +101,4 @@ menu just below the Photoshop menu bar:
   [2]: http://www.lodgephoto.com/images/sparkline_script_location.gif
   [3]: http://www.lodgephoto.com/images/sparkline_file_menu.gif
   [4]: http://www.lodgephoto.com/images/sparkline_pencil_select.gif
-  [5]: http://www.lodgepho%0A%0ATRUNCATED!%20%20Please%20download%20pandoc%20if%20you%20want%20to%20convert%20large%20files.
+
