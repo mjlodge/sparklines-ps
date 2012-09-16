@@ -1,3 +1,6 @@
+Sparklines-ps is a Photoshop script to draw Sparklines, written in JavaScript
+for PC and Mac Photoshop CS and newer.
+
 A sparkline is a small line graph designed to be used in-line within
 text to illustrate a time series; the concept was developed by data
 presentation guru [Edward Tufte](http://www.edwardtufte.com/). Here’s an
@@ -18,11 +21,12 @@ together to allow at-a-glance comparison between a set of time series.
 At Tufte’s web site there is a [longer description of
 sparklines](http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR&topic_id=1&topic=),
 with further examples, from a sample chapter of Tufte’s book, *Beautiful
-Evidence*. Sparklines are tangentially related to photography – they are
-used alongside images as a graphical design element in qualitative and
-quantitative analysis.
+Evidence*.
 
-Sparklines can be hard to produce. Most graphing packages are designed
+Sparklines were hard to produce when this script was first written, though
+support has improved as Sparklines have become mainstream -- e.g. Excel
+now has a Sparkline plotting capability.
+Most graphing packages are designed
 to produce large graphs or charts, and it can be very hard to generate
 the wide-but-thin lines for incorporation in documents. This was the
 motivation for writing a Photoshop script that would automate the
@@ -34,25 +38,31 @@ control of the color and line style of the sparkline by setting the
 Photoshop foreground color and pencil tool settings before running the
 script.
 
-Mac support and PS CS2 testing
+Licensing
+---------
+Sparkline-ps is open source and licensed under the GNU GPLv3. That means
+it is free to use
+without royalty or fee, and may not be incorporated into a commercial product,
+and all derivative works are also covered by GPLv3. For more information on
+GPLv3, see the Free Software Foundation website: (http://gplv3.fsf.org/)
+
+The full licensng text is in COPYING.md
+
+
+Mac support and PS CS6 testing
 ------------------------------
 
 Some Mac users had reported problems with the Sparkline script not being
 able to open text data files. Thanks to the help of two kindly Mac
 contributors, I found and fixed the problem. In addition, the script has
-been tested on Photoshop CS2. All the changes are incorporated in
-Version 2 of the script below.
+been tested on Photoshop CS2-CS6. All the changes are incorporated in
+Version 2 of the script.
 
 Installing the sparkline script
 -------------------------------
 
-The code of the sparkline script for Adobe Photoshop CS/CS2/CS3 is
-included below. While it will run on Mac or PC Photoshop, it does not
-work on any earlier versions. You can also right click (Mac: Option
-click) [here to download the
-script](http://www.lodgephoto.com/articles/sparklinesv2.js). Select
-“Save as…” from the menu that pops up, and save it somewhere where you
-can find it on your computer.
+The code will run on Mac or PC Photoshop CS or later; it does not
+work on any earlier versions.
 
 The script works on textual data files, where the first line is the name
 of the quantity being charted, and the remainder of the lines are the
@@ -63,11 +73,11 @@ legend in cell A1, then the data values in cells A2, A3 and so on, and
 then do File-\>Save As… and select “Text file” for the output format.
 
 To install the script, first locate Adobe Photoshop’s main directory on
-your computer. On my (Windows) computer, it’s in C:Program
-FilesAdobePhotoshop CS
+your computer. On my (Windows) computer, it’s in C:\\Program
+Files\\Adobe\\Photoshop CS6
 
 On the PC, save the script as Sparklinev2.js in the directory
-\<Photoshop dir\>PresetsScripts
+\<Photoshop dir\>Presets\\Scripts
 
 On the Mac, save the script as Sparklinev2.js in the directory
 \<Photoshop dir\>/Presets/Scripts
