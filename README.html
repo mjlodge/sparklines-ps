@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Sparklines READMNE</title>
+</head>
+
+<body>
+<p>A sparkline is a small line graph designed to be used in-line within text to illustrate a time series; the concept was developed by data presentation guru <a target="_blank" href="http://www.edwardtufte.com/">Edward Tufte</a>. Here&#8217;s an example:</p>
+<p><strong>University of California 403(b) pension fund cumulative return Jan 1990-April 2004</strong> (<a target="_blank" href="http://atyourservice.ucop.edu/employees/retirement/performance.html">original data</a>)</p>
+<table border="0" cellPadding="0" cellSpacing="0">
+<tr>
+<td>Equities</td>
+<td vAlign="bottom"><img align="baseline" src="http://www.lodgephoto.com/images/Sparkline_uc_equity.gif" /></td>
+<td>267%</td>
+</tr>
+<tr>
+<td>Bonds</td>
+<td vAlign="bottom"><img align="baseline" src="http://www.lodgephoto.com/images/Sparkline_uc_bond.gif" /></td>
+<td>154%</td>
+</tr>
+</table>
+<p>The idea is to show, using minimal space, how a value varies over time. One advantage of sparklines&#8217; compactness is that several can be used together to allow at-a-glance comparison between a set of time series. At Tufte&#8217;s web site there is a <a target="_blank" href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR&amp;topic_id=1&amp;topic=">longer description of sparklines</a>, with further examples, from a sample chapter of Tufte&#8217;s book, <em>Beautiful Evidence</em>. Sparklines are tangentially related to photography &#8211; they are used alongside images as a graphical design element in qualitative and quantitative analysis.<span id="more-18"></span></p>
+<p>Sparklines can be hard to produce. Most graphing packages are designed to produce large graphs or charts, and it can be very hard to generate the wide-but-thin lines for incorporation in documents. This was the motivation for writing a Photoshop script that would automate the production of sparklines. It works by reading a data series from a text file and plotting a sparkline image as a Photoshop path, and then stroking it with the pencil tool. This produces a bitmap image which can then be cut-and-pasted into the target document. The user retains control of the color and line style of the sparkline by setting the Photoshop foreground color and pencil tool settings before running the script.</p>
+<h2>Mac support and PS CS2 testing</h2>
+<p>Some Mac users had reported problems with the Sparkline script not being able to open text data files. Thanks to the help of two kindly Mac contributors, I found and fixed the problem. In addition, the script has been tested on Photoshop CS2. All the changes are incorporated in Version 2 of the script below.</p>
+<h2>Installing the sparkline script</h2>
+<p>The code of the sparkline script for Adobe Photoshop CS/CS2/CS3 is included below. While it will run on Mac or PC Photoshop, it does not work on any earlier versions. You can also right click (Mac: Option click) <a href="http://www.lodgephoto.com/articles/sparklinesv2.js">here to download the script</a>. Select &#8220;Save as&#8230;&#8221; from the menu that pops up, and save it somewhere where you can find it on your computer.</p>
+<p>The script works on textual data files, where the first line is the name of the quantity being charted, and the remainder of the lines are the data values. To start you off, here&#8217;s a <a href="http://www.lodgephoto.com/articles/Example_data.txt">sample data file for wind speed</a>. Using Microsoft Excel, it&#8217;s easy to create data files in this format: put the legend in cell A1, then the data values in cells A2, A3 and so on, and then do File-&gt;Save As&#8230; and select &#8220;Text file&#8221; for the output format.</p>
+<p>To install the script, first locate Adobe Photoshop&#8217;s main directory on your computer. On my (Windows) computer, it&#8217;s in C:Program FilesAdobePhotoshop CS</p>
+<p>On the PC, save the script as Sparklinev2.js in the directory &lt;Photoshop dir&gt;PresetsScripts</p>
+<p>On the Mac, save the script as Sparklinev2.js in the directory &lt;Photoshop dir&gt;/Presets/Scripts</p>
+<p><img width="533" src="http://www.lodgephoto.com/images/sparkline_script_location.gif" height="672" /></p>
+<p>Start Photoshop (or re-start it, if it was already running). You should now see the Sparkline script on the File-&gt;Scripts menu:</p>
+<p><img width="533" src="http://www.lodgephoto.com/images/sparkline_file_menu.gif" height="672" /></p>
+<h1>Using the script</h1>
+<p>First of all, select the foreground color and Pencil tool settings that you want to use for the Sparkline. To select a foreground color, double click on the foreground color swatch in the palette menu. To select the pencil tool, right-click (Mac: option-click) on the palette menu as shown:</p>
+<p><img width="194" src="http://www.lodgephoto.com/images/sparkline_pencil_select.gif" height="178" /></p>
+<p>Then, set the pencil defaults to whatever you&#8217;d prefer using the tool menu just below the Photoshop menu bar:</p>
+<p><img width="290" src="http://www.lodgephoto.com/images/sparkline_pencil_params.gif" height="365" /></p>
+<p>Click File-&gt;Scripts-&gt;Sparkline (as shown in the screen shot above) to start the script. You will be promoted to locate the file containing the sparkline data:</p>
+<p><img width="563" src="http://www.lodgephoto.com/images/sparkline_open_data.gif" height="414" /></p>
+<p>Click &#8220;Open&#8221;; the script will open the file and then prompt you for the height of the sparkline, in pixels. The default height is 50 pixels, which is 50 points (0.7&#8243;) high on a typical 72dpi computer screen, and 12 points high when printed on paper at 300dpi (you can change the default height by editing the script).</p>
+<p>The script will then ask if you want to automatically scale the sparkline to the document height. If you select Yes, then the script uses the minimum and maximum values present in the data file to scale the Y axis such that the minimum value is plotted at the bottom of the document, and the maximum value is plotted at the top, like this (a border has been added to make it easier to see the effect):</p>
+<p><img border="1" width="768" src="http://www.lodgephoto.com/images/sparkline_auto.gif" height="50" /></p>
+<p>If you select No, then the script will prompt you for the Y intercept (the data value that will be plotted at the bottom of the document) and the maximum Y value (which will be plotted at the top of the document). For example, using a Y intercept of 0 and a max Y value of 50, the same data would be plotted as follows (again, border added for clarity):</p>
+<p><img border="1" width="768" src="http://www.lodgephoto.com/images/sparkline_0_50.gif" height="50" /></p>
+<p>Finally, the script asks for the X axis pixel spacing between points. The default setting of 1 plots each point of the sparkline immediately adjacent (one pixel away) from the previous point. To make the sparkline shorter, use a value less than 1. To make it longer, use a value greater than one. For example:</p>
+<p>X axis pixel spacing of 0.3: <img align="middle" width="230" src="http://www.lodgephoto.com/images/sparkline_x_03.gif" height="50" /></p>
+<p>X axis pixel spacing of 0.5: <img align="middle" width="384" src="http://www.lodgephoto.com/images/sparkline_x_05.gif" height="50" /></p>
+<h2>Advanced topics: Use of time travel</h2>
+<p>Because the script creates a regular Photoshop document complete with history, you can use the Photoshop history palette to &#8220;go back in time&#8221; and change the way that the path is stroked. For example, to use a Brush stroke rather than a Pencil stroke, you&#8217;d go back in the document history to the point where the path has been saved, but before it has been stroked. Then stroke it with the Brush, rather than the Pencil.</p>
+<p>First of all, open both the History and Paths palettes. Then, use the History palette to go back to the document state before the stroke occurred:</p>
+<p><img width="484" src="http://www.lodgephoto.com/images/sparkline_history.gif" height="205" /></p>
+<p>Then, right click (Mac: option-click) on the Sparkline path in the channels palette. Select &#8220;Stroke path&#8230;&#8221; from the pop-up menu.</p>
+<p>The following dialog will appear, and you can elect to stroke the path using the Brush, or indeed any of the other Photoshop tools:</p>
+<p><img width="328" src="http://www.lodgephoto.com/images/sparkline_stroke.gif" height="360" /></p>
+</body>
+</html>
