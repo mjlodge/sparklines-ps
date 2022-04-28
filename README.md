@@ -38,16 +38,6 @@ GPLv3, see the Free Software Foundation website: (http://gplv3.fsf.org/)
 
 The full licensng text is in COPYING.md
 
-
-Mac support and PS CS6 testing
-------------------------------
-
-Some Mac users had reported problems with the Sparkline script not being
-able to open text data files. Thanks to the help of two kindly Mac
-contributors, I found and fixed the problem. In addition, the script has
-been tested on Photoshop CS2-CS6. All the changes are incorporated in
-Version 2 of the script.
-
 Installing the sparkline script
 -------------------------------
 
@@ -56,8 +46,7 @@ work on any earlier versions.
 
 The script works on textual data files, where the first line is the name
 of the quantity being charted, and the remainder of the lines are the
-data values. To start you off, here’s a [sample data file for wind
-speed](http://www.lodgephoto.com/articles/Example_data.txt). Using
+data values. Using
 Microsoft Excel, it’s easy to create data files in this format: put the
 legend in cell A1, then the data values in cells A2, A3 and so on, and
 then do File-\>Save As… and select “Text file” for the output format.
@@ -72,12 +61,8 @@ On the PC, save the script as Sparklinev2.js in the directory
 On the Mac, save the script as Sparklinev2.js in the directory
 \<Photoshop dir\>/Presets/Scripts
 
-![](http://www.lodgephoto.com/images/sparkline_script_location.gif)
-
 Start Photoshop (or re-start it, if it was already running). You should
-now see the Sparkline script on the File-\>Scripts menu:
-
-![](http://www.lodgephoto.com/images/sparkline_file_menu.gif)
+now see the Sparkline script on the File-\>Scripts menu.
 
 Using the script
 ================
@@ -85,21 +70,14 @@ Using the script
 First of all, select the foreground color and Pencil tool settings that
 you want to use for the Sparkline. To select a foreground color, double
 click on the foreground color swatch in the palette menu. To select the
-pencil tool, right-click (Mac: option-click) on the palette menu as
-shown:
-
-![](http://www.lodgephoto.com/images/sparkline_pencil_select.gif)
+pencil tool, right-click (Mac: option-click) on the palette menu.
 
 Then, set the pencil defaults to whatever you’d prefer using the tool
-menu just below the Photoshop menu bar:
+menu just below the Photoshop menu bar.
 
-![](http://www.lodgephoto.com/images/sparkline_pencil_params.gif)
-
-Click File-\>Scripts-\>Sparkline (as shown in the screen shot above) to
+Click File-\>Scripts-\>Sparkline to
 start the script. You will be promoted to locate the file containing the
-sparkline data:
-
-![](http://www.lodgephoto.com/images/sparkline_open_data.gif)
+sparkline data.
 
 Click “Open”; the script will open the file and then prompt you for the
 height of the sparkline, in pixels. The default height is 50 pixels,
@@ -111,30 +89,17 @@ The script will then ask if you want to automatically scale the
 sparkline to the document height. If you select Yes, then the script
 uses the minimum and maximum values present in the data file to scale
 the Y axis such that the minimum value is plotted at the bottom of the
-document, and the maximum value is plotted at the top, like this (a
-border has been added to make it easier to see the effect):
-
-![](http://www.lodgephoto.com/images/sparkline_auto.gif)
+document, and the maximum value is plotted at the top.
 
 If you select No, then the script will prompt you for the Y intercept
 (the data value that will be plotted at the bottom of the document) and
 the maximum Y value (which will be plotted at the top of the document).
-For example, using a Y intercept of 0 and a max Y value of 50, the same
-data would be plotted as follows (again, border added for clarity):
-
-![](http://www.lodgephoto.com/images/sparkline_0_50.gif)
 
 Finally, the script asks for the X axis pixel spacing between points.
 The default setting of 1 plots each point of the sparkline immediately
 adjacent (one pixel away) from the previous point. To make the sparkline
 shorter, use a value less than 1. To make it longer, use a value greater
-than one. For example:
-
-X axis pixel spacing of 0.3:
-![](http://www.lodgephoto.com/images/sparkline_x_03.gif)
-
-X axis pixel spacing of 0.5:
-![](http://www.lodgephoto.com/images/sparkline_x_05.gif)
+than one.
 
 Advanced topics: Use of time travel
 -----------------------------------
@@ -145,17 +110,3 @@ and change the way that the path is stroked. For example, to use a Brush
 stroke rather than a Pencil stroke, you’d go back in the document
 history to the point where the path has been saved, but before it has
 been stroked. Then stroke it with the Brush, rather than the Pencil.
-
-First of all, open both the History and Paths palettes. Then, use the
-History palette to go back to the document state before the stroke
-occurred:
-
-![](http://www.lodgephoto.com/images/sparkline_history.gif)
-
-Then, right click (Mac: option-click) on the Sparkline path in the
-channels palette. Select “Stroke path…” from the pop-up menu.
-
-The following dialog will appear, and you can elect to stroke the path
-using the Brush, or indeed any of the other Photoshop tools:
-
-![](http://www.lodgephoto.com/images/sparkline_stroke.gif)
