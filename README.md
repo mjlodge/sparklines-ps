@@ -3,17 +3,7 @@ for PC and Mac Photoshop CS and newer.
 
 A sparkline is a small line graph designed to be used in-line within
 text to illustrate a time series; the concept was developed by data
-presentation guru [Edward Tufte](http://www.edwardtufte.com/). Here’s an
-example:
-
-**University of California 403(b) pension fund cumulative return Jan
-1990-April 2004** ([original
-data](http://atyourservice.ucop.edu/employees/retirement/performance.html))
-
-  ---------- --------------------------------------------------------------- ------
-  Equities   ![](http://www.lodgephoto.com/images/Sparkline_uc_equity.gif)   267%
-  Bonds      ![](http://www.lodgephoto.com/images/Sparkline_uc_bond.gif)     154%
-  ---------- --------------------------------------------------------------- ------
+presentation guru [Edward Tufte](http://www.edwardtufte.com/).
 
 The idea is to show, using minimal space, how a value varies over time.
 One advantage of sparklines’ compactness is that several can be used
